@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 
-export const port = process.env.PORT || 3001;
-export const host = process.env.WEBSITE_HOSTNAME || `localhost:${port}`;
+export const port = process.env.PORT || 4001;
+export const host = process.env.WEBSITE_HOSTNAME || `127.0.0.1:${port}`;
 
 export const analytics = {
 
@@ -14,7 +14,7 @@ export const analytics = {
 
 export const common = {
   api: {
-    URL: 'http://localhost:3000', // production code-push-server address
-    devURL: 'http://localhost:3000', // development code-push-server address
+    URL: 'http://code-push-server.duoduo.net.cn', // production code-push-server address
+    devURL: 'http://code-push-server.duoduo.net.cn', // development code-push-server address
   },
 };
