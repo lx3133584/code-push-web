@@ -216,7 +216,7 @@ const clientConfig = {
       // Minimize all JavaScript output of chunks
       // https://github.com/mishoo/UglifyJS2#compressor-options
       new webpack.optimize.UglifyJsPlugin({
-        sourceMap: true,
+        sourceMap: isDebug,
         compress: {
           screw_ie8: true, // React doesn't support IE8
           warnings: isVerbose,
@@ -338,7 +338,6 @@ const serverConfig = {
     // Do not create separate chunks of the server bundle
     // https://webpack.github.io/docs/list-of-plugins.html#limitchunkcountplugin
     new webpack.optimize.LimitChunkCountPlugin({ maxChunks: 1 }),
-
     // Adds a banner to the top of each generated chunk
     // https://webpack.github.io/docs/list-of-plugins.html#bannerplugin
     new webpack.BannerPlugin({

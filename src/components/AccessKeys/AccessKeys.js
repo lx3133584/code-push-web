@@ -41,7 +41,7 @@ class AccessKeys extends Component {
 
   renderRow(rowData, index) {
     const self = this;
-    const moment = require('moment');
+    const moment = require('dayjs');
     return (
       <tr key={_.get(rowData, 'id')}>
         <td>
